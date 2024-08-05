@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hi_five/screens/auth.dart';
 
  class splash extends StatefulWidget {
   const splash({super.key});
@@ -14,7 +15,7 @@ class _splashState extends State<splash> with SingleTickerProviderStateMixin{
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => login()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => auth()));
     });
   }
 
@@ -32,22 +33,11 @@ class _splashState extends State<splash> with SingleTickerProviderStateMixin{
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            //colors: [Color.fromARGB(255,213,240,239),Color.fromARGB(255,213,152,113)],
-            colors: [Colors.black, Colors.black],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-          ),
+          color: Colors.black
         ),
         child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.bakery_dining_outlined,
-              size: 80,
-              color: Colors.white,
-            ),
-            SizedBox(height: 20),
             Text(
               'HiFive',
               style: TextStyle(
