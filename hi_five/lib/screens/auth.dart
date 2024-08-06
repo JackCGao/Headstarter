@@ -37,7 +37,10 @@ class _authState extends State<auth>{
                 color: Colors.white,
                 fontSize: 32,
               ),
-            )
+            ),  
+            const SizedBox(height:40),
+            //implement button redirecting to login screen
+            //implement button redirecting to signup screen
           ],
         ),
       ),
